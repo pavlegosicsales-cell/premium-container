@@ -30,9 +30,26 @@ wizard forma i footer.
    pozadina `rgba(140,140,140,.2)`, radijus `999px`, padding `5px 10px 5px 5px`,
    gap `7px`, okrugla koral ikonica 20px, tekst 14px / 600 / uppercase, beo.
    Klasa je `.eyebrow` u heroju i `.eyebrow-ico` za ikonicu.
-4. **Sticky kartice radova su veće.** Constra kartica je 1240x556 sa 50px paddinga,
+4. **Logo je bez podloge i veći.** PNG je i ranije bio providan, ali je CSS ispod
+   njega crtao teal pločicu sa radijusom (`background: var(--deep)` i padding 5px),
+   pa je izgledao kao da ima pozadinu. Pločica je uklonjena. Znak je u navu sada
+   58px umesto 46px, u futeru 116px umesto 92px, a wordmark 25px umesto 21px.
+   Usput su i zaostale navy `rgba(20,35,66,...)` vrednosti iz kiwiseal builda
+   prebačene na Constra teal, jer nav i overlay nisu pratili novu paletu.
+5. **Sticky kartice radova su veće.** Constra kartica je 1240x556 sa 50px paddinga,
    naša je sada 1310x520, slika 470x420, padding 45px, gap 50px. Ranije je bila
    padding 30px i slika 300x300.
+
+## Mobilni prolaz
+
+Provereno na 375px i 400px:
+
+- Wordmark u navu ide u dva reda ispod 560px, jer na jednom redu guši dugme za meni.
+  Pre ispravke je dugme bilo stisnuto na 4px širine i praktično se nije moglo pogoditi.
+- Svi linkovi i dugmad su minimum 44px visine, uključujući kontakt linije i futer.
+- Ritam sekcija je skraćen sa 100px na 64px, hero na 128px, da strana ne bude
+  beskrajna na telefonu.
+- Nema horizontalnog skrola ni na jednoj strani.
 
 ## Mapa sekcija
 
@@ -87,6 +104,10 @@ nisu korišćena u ovom buildu.
    3.850 EUR. Nije stavljeno na sajt jer je akcijska cena, treba potvrda.
 7. **WhatsApp ili Viber** broj za dugme na mobilnom, ako ga koriste.
 8. **Google Business profil** za recenzije, pa da se uključi blok sa ocenama.
+
+## Git
+
+Sajt je na `github.com/pavlegosicsales-cell/premium-container`, grana `main`.
 
 ## Lokalni pregled
 
