@@ -266,9 +266,16 @@ section { padding-block: var(--section-y); }
   background: var(--white);
   color: var(--flame);
   flex: none;
-  transition: transform .35s var(--ease-out), color .35s var(--ease-out);
+  transition: transform .35s var(--ease-out),
+              background .35s var(--ease-out),
+              color .35s var(--ease-out);
 }
-.btn:hover .btn-ico { background: var(--white); color: var(--ink); }
+/* Kao na referenci: ikonica se pomeri i okrene, dugme stoji na mestu. */
+.btn:hover .btn-ico {
+  transform: translateX(3px) rotate(-45deg);
+  background: var(--flame);
+  color: var(--ink);
+}
 .btn-ico svg { width: 20px; height: 20px; }
 
 .btn-block { width: 100%; justify-content: space-between; }
@@ -392,6 +399,7 @@ section { padding-block: var(--section-y); }
 .nav-link {
   position: relative;
   display: inline-flex;
+  white-space: nowrap;
   align-items: center;
   gap: 5px;
   font-weight: 500;
